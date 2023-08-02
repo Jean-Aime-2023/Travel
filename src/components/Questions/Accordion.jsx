@@ -20,7 +20,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import "./Accordion.css";
-import Chevron from "../../assets/scroll-icon-23.png";
+import Chevron from "../../assets/scroll-icon-23 (2).png";
 
 export default function Accordion() {
   const [toggle, setToggle] = useState(false);
@@ -29,7 +29,7 @@ export default function Accordion() {
   const refHeight = useRef();
 
   useEffect(() => {
-    console.log(refHeight);
+    // console.log(refHeight);
     setHeightEl(`${refHeight.current.scrollHeight}px`);
   }, []);
 
@@ -37,7 +37,7 @@ export default function Accordion() {
     setToggle(!toggle);
   };
 
-  console.log(toggle);
+  // console.log(toggle);
   return (
     <div className="accordion">
       <button onClick={toggleState} className="accordion-visible">
@@ -52,7 +52,7 @@ export default function Accordion() {
       >
         <p
           aria-hidden={toggle ? "true" : "false"}
-          style={{ background: "hsl(14,96%,91%)" }}
+          style={{ background: "hsl(300,3%,94%)" }}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
           suscipit quae maiores sunt ducimus est dolorem perspiciatis earum

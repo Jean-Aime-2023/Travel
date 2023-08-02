@@ -14,6 +14,7 @@ const Questions = () => {
           <Accordion/>
           <Accordion/>
           <Accordion/>
+          <Accordion/>
         </div>
 
         <div className="form">
