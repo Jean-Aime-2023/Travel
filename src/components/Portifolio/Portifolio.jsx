@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Portifolio.css";
 
 //image-icons
@@ -9,34 +9,44 @@ import icon3 from '../../assets/cust-support.png';
 //images
 import image from '../../assets/grid.png'
 
+//aos
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 const Portifolio = () => {
+
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+   },[])
+
+
   return (
     <div className="portifolio section container">
       <div className="secContainer grid">
         <div className="leftContent">
           <div className="secHeading">
-            <h3>Why Should You Choose Us</h3>
-            <p>
+            <h3 data-aos="fade-up">Why Should You Choose Us</h3>
+            <p data-aos="fade-up">
               We have extensive knowledge and experience in the travel
               industry.
             </p>
           </div>
 
           <div className="grid">
-            <div className="singlePortifolio flex">
+            <div className="singlePortifolio flex"  data-aos="fade-up">
               <div className="iconDiv">
                 <img src={icon1} alt="Icon Image" />
               </div>
 
-              <div className="info">
-                <h4>Safety and Support</h4>
-                <p>
+              <div className="info" data-aos="fade-up">
+                <h4 data-aos="fade-up">Safety and Support</h4>
+                <p data-aos="fade-up">
                   Our top priority is the safety and well-being of our clients. We maintain high safety standards and have emergency support available during the trip.
                 </p>
               </div>
             </div>
 
-            <div className="singlePortifolio flex">
+            <div className="singlePortifolio flex" data-aos="fade-up">
               <div className="iconDiv">
                 <img src={icon2} alt="Icon Image" />
               </div>
@@ -49,7 +59,7 @@ const Portifolio = () => {
               </div>
             </div>
 
-            <div className="singlePortifolio flex">
+            <div className="singlePortifolio flex" data-aos="fade-up">
               <div className="iconDiv">
                 <img src={icon3} alt="Icon image" />
               </div>
@@ -64,7 +74,7 @@ const Portifolio = () => {
           </div>
         </div>
 
-        <div className="rightContent">
+        <div className="rightContent" data-aos="fade-down">
          <img src={image} alt="Image" /> 
         </div>
       </div>
