@@ -176,3 +176,11 @@ root{
     }
    }
 }
+
+@media screen and (min-width: 440px) {
+    .portifolio {
+      .secContainer {
+         grid-template-columns: repeat(1,1fr);
+      }
+  }
+  }
